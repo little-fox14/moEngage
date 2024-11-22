@@ -25,7 +25,7 @@ const Signup = () => {
 
     setLoading(true);
     try {
-      await axios.post('http://localhost:8000/api/users/signup', { username, password });
+      await axios.post('https://moengage-backend-49jz.onrender.com/api/users/signup', { username, password });
       alert('Signup successful! Redirecting to login page...');
       navigate('/login');
     } catch (err) {
