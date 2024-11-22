@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "private": "true",
-  "proxy": "http://localhost:8000",
+  "proxy": "https://mo-engage-eight.vercel.app/",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
