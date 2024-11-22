@@ -49,7 +49,7 @@ const Search = () => {
       const imageLinks = results.map(result => result.image);
       const creationDate = new Date().toISOString();
 
-      await axios.post('http://localhost:8000/api/lists', { name, creationDate, responseCodes, imageLinks });
+      await axios.post('https://moengage-backend-49jz.onrender.com/api/lists', { name, creationDate, responseCodes, imageLinks });
       alert('List saved successfully!');
       window.location.href = '/lists';
     } catch (err) {
