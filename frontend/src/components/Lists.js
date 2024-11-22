@@ -13,7 +13,7 @@ const Lists = () => {
     const fetchLists = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:8000/api/lists');
+        const response = await axios.get('https://moengage-backend-49jz.onrender.com/api/lists');
         setLists(response.data);
       } catch (err) {
         console.error('Error fetching lists:', err);
@@ -29,7 +29,7 @@ const Lists = () => {
   // Handle delete operation
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/lists/${id}`);
+      await axios.delete(`https://moengage-backend-49jz.onrender.com/api/lists/${id}`);
       setLists(lists.filter((list) => list._id !== id));
       if (selectedList && selectedList._id === id) {
         setSelectedList(null);
@@ -58,7 +58,7 @@ const Lists = () => {
   // Save the updated list
   const saveUpdatedList = async () => {
     try {
-      await axios.put(`http://localhost:8000/api/lists/${selectedList._id}`, selectedList);
+      await axios.put(`https://moengage-backend-49jz.onrender.com/api/lists/${selectedList._id}`, selectedList);
       setLists(lists.map((list) => (list._id === selectedList._id ? selectedList : list)));
       setShow(false);
     } catch (err) {
