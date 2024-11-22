@@ -17,7 +17,7 @@ const Login = () => {
     }
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/api/users/login', { username, password });
+      const response = await axios.post('https://moengage-backend-49jz.onrender.com/api/users/login', { username, password });
       localStorage.setItem('token', response.data.token);
       navigate('/search');
     } catch (error) {
